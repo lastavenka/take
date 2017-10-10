@@ -1,0 +1,25 @@
+footer.page-footer
+  .page-footer__wrap
+    .page-footer__inner
+      h4.page-footer__subtitle Get in touch
+      p.page-footer__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+      form(class="page-footer__form", method="POST", action="#")
+        h4.page-footer__subtitle Stay in touch
+        fieldset.page-footer__fieldset
+          label.page-footer__label
+            input(class="page-footer__input", type="email", name="email")
+          button(class="page-footer__submit", type="submit", name="submit") Subscribe
+        span.page-footer__note We don’t send spam. Actually, who are we kiding, we’ll spam the shit out of you’r inbox
+    .page-footer__inner
+      .page-footer__cont
+        - var resourcesList = ["Tour", "Customers", "Pricing and Plans", "New Features", "Education"]
+        h4.page-footer__subtitle Resources
+        +list("page-footer__list", resourcesList)
+      .page-footer__cont
+        - var featuresList = ["Quality", "Information", "Notability", "Individuality"]
+        h4.page-footer__subtitle Features
+        +list("page-footer__list", featuresList)
+      .page-footer__cont
+        - var howtoList = ["Plans", "DIY", "Responsibility", "Buying", "FAQ", "Help"]
+        h4.page-footer__subtitle How To's
+        +list("page-footer__list", howtoList)

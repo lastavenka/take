@@ -1,0 +1,10 @@
+mixin link(href, bem, name)
+  a(href=href, class=bem)= name
+
+mixin list(bem, arr)
+  ul(class=bem)
+    each item in arr
+      li(class=bem + "-item")= item
+
+mixin img(src, srcset, bem, alttext)
+  img(src="static/img/general/"+src, srcset="static/img/general/"+srcset, class=bem, alt=alttext)
