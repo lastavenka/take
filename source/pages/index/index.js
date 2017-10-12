@@ -1,2 +1,2 @@
-"use strict"
-console.log('in index.js');
+import './index.scss';
+import 'normalize.css';
