@@ -8,6 +8,7 @@ const css = require('./webpack/css');
 const extractCSS = require('./webpack/css.extract');
 const images = require('./webpack/images');
 const uglifyJS = require('./webpack/js.uglify');
+const hintJS = require('./webpack/js.hint');
  
 const PATHS = {
     source: path.join(__dirname, 'source'),
@@ -44,7 +45,8 @@ module.exports = function(env) {
             common,
             devserver(),
             sass(),
-            css()
+            css(),
+            hintJS()
         ]);
     }
 };
