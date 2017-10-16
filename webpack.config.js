@@ -6,9 +6,9 @@ const devserver = require('./webpack/devserver');
 const sass = require('./webpack/sass');
 const css = require('./webpack/css');
 const extractCSS = require('./webpack/css.extract');
-const images = require('./webpack/images');
 const uglifyJS = require('./webpack/js.uglify');
 const hintJS = require('./webpack/js.hint');
+const imgMin = require('./webpack/img.min');
  
 const PATHS = {
     source: path.join(__dirname, 'source'),
@@ -20,7 +20,7 @@ const common = merge([
     entry: PATHS.source + '/pages/index/index.js',
     output: {
         path: PATHS.build,
-        filename: '[name].js'
+        filename: 'js/[name].js'
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -29,7 +29,7 @@ const common = merge([
     ]
   },
   pug(),
-  images()
+  imgMin()
 ]);
 
 module.exports = function(env) {
@@ -37,7 +37,8 @@ module.exports = function(env) {
         return merge([
           common,
           extractCSS(),
-          uglifyJS()
+          uglifyJS(),
+          
       ]);
     }
     if (env === 'development') {
