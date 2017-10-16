@@ -9,6 +9,7 @@ const extractCSS = require('./webpack/css.extract');
 const uglifyJS = require('./webpack/js.uglify');
 const hintJS = require('./webpack/js.hint');
 const imgMin = require('./webpack/img.min');
+const styleLint = require('./webpack/stylelint');
  
 const PATHS = {
     source: path.join(__dirname, 'source'),
@@ -38,13 +39,13 @@ module.exports = function(env) {
           common,
           extractCSS(),
           uglifyJS(),
-          
       ]);
     }
     if (env === 'development') {
         return merge([
             common,
             devserver(),
+            styleLint(),
             sass(),
             css(),
             hintJS()
