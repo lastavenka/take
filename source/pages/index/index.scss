@@ -1,3 +1,10 @@
-h1 {
-  background: green;
+@import "../../sass/variables";
+@import "../../sass/scaffolding";
+@import "../../sass/type";
+@import "../../sass/mixins";
+@import "../../modules/header/page-header";
+@import "../../modules/footer/page-footer";
+
+.features {
+  background-image: url("img/features__item--clients.jpg");
 }
