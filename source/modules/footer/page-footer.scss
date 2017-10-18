@@ -2,20 +2,22 @@
 @import "../../sass/scaffolding";
 @import "../../sass/type";
 @import "../../sass/mixins";
-
 .page-footer {
   background-color: $dark-blue;
   padding-top: 125px;
   padding-bottom: 150px;
+  @media (max-width: $min-width-1) {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
   &__wrap {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 2%;
-    padding-right: 2%;
-    max-width: 1170px;
+    @include wrapper;
     display: grid;
     grid-template-columns: percentage(570px / 1170px) 1fr percentage(470px / 1170px);
     grid-template-rows: 50% 50%;
+    @media (max-width: $min-width-1) {
+      display: block;
+    }
   }
   &__getintouch {
     grid-column: 1 / span 1;
@@ -24,6 +26,9 @@
   &__form {
     grid-column: 3 / span 1;
     grid-row: 1 / span 1;
+    @media (max-width: $min-width-1) {
+      margin-top: 60px;
+  }
   }
   &__inner {
     display: flex;
@@ -105,5 +110,9 @@
     line-height: $line-height-base + .6;
     font-weight: 400;
     color: $grey-light;
+    a:hover,
+    a:active {
+      color: transparentize($grey-light, .2);
+    }
   }
 }

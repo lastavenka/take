@@ -8,23 +8,30 @@
   background-color: $white;
   padding-top: 105px;
   padding-bottom: 80px;
+  @media (max-width: $min-width-1) {
+    padding-top: 70px;
+    padding-bottom: 60px;
+  }
   &__wrap {
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 2%;
-    padding-right: 2%;
-    max-width: 1170px;
+    @include wrapper;
   }
   &__img {
     position: absolute;
     width: 120%;
     right: 0;
     bottom: 110%;
+    @media (max-width: $min-width-1) {
+      position: static;
+      width: 100%;
+    }
   }
   &__cont {
     display: grid;
     grid-template-columns: 49% 1fr 49%;
+    @media (max-width: $min-width-1) {
+      display: block;
+    }
   }
   &__inner {
     grid-column: 1 / span 1;
@@ -32,6 +39,9 @@
       position: relative;
       grid-column: 3 / span 1;
       margin-top: 100px;
+      @media (max-width: $min-width-1) {
+        margin-top: 30px;
+      }
     }
   }
   &__title {
@@ -42,6 +52,9 @@
     line-height: $line-height-base;
     font-weight: 300;
     color: $grey-green;
+    @media (max-width: $min-width-1) {
+      font-size: $font-size-h1 / 2;
+    }
   }
   &__text {
     margin-top: 0;
@@ -69,6 +82,10 @@
     padding: 0;
     grid-template-columns: repeat(8, 12.5%);
     grid-template-rows: 50% 50%;
+    @media (max-width: $min-width-1) {
+      grid-template-columns: repeat(4, 25%);
+      grid-template-rows: repeat(4, auto);
+    }
   }
   &__item {
     display: flex;
@@ -97,11 +114,19 @@
       }
       grid-row: 1 / span 1;
       grid-column: 5 / span 2;
+      @media (max-width: $min-width-1) {
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 2;
+      }
     }
     &--howto {
       background-color: $lilac;
       grid-row: 1 / span 1;
       grid-column: 7 / span 2;
+      @media (max-width: $min-width-1) {
+        grid-row: 2 / span 1;
+        grid-column: 3 / span 2;
+      }
     }
     &--signup {
       padding-right: 7%;
@@ -109,16 +134,26 @@
       background-image: url("./img/features__item--signup.jpg");
       background-repeat: no-repeat;
       background-size: cover;
+      grid-column: 1 / span 3;
+      grid-row: 2 / span 1;
       @media (min-resolution: 2dppx) {
         background-image: url('./img/features__item--signup@2x.jpg');
       }
-      grid-column: 1 / span 3;
-      grid-row: 2 / span 1;
+      @media (max-width: $min-width-1) {
+        grid-row: 3 / span 1;
+        grid-column: 1 / span 4;
+      }
     }
     &--pictures {
       background-color: $green;
       grid-column: 4 / span 2;
       grid-row: 2 / span 1;
+      @media (max-width: $min-width-1) {
+        grid-row: 4 / span 1;
+        grid-column: 1 / span 4;
+        padding-right: 7%;
+        padding-left: 7%;
+      }
     }
     &--new {
       padding-right: 7%;
@@ -126,11 +161,15 @@
       background-image: url("./img/features__item--new.jpg");
       background-repeat: no-repeat;
       background-size: cover;
+      grid-column: 6 / span 3;
+      grid-row: 2 / span 1;
       @media (min-resolution: 2dppx) {
         background-image: url('./img/features__item--new@2x.jpg');
       }
-      grid-column: 6 / span 3;
-      grid-row: 2 / span 1;
+      @media (max-width: $min-width-1) {
+        grid-row: 5 / span 1;
+        grid-column: 1 / span 4;
+      }
     }
   }
   &__item-title {
@@ -141,6 +180,9 @@
     line-height: $line-height-base;
     font-weight: 300;
     color: $white;
+    @media (max-width: $min-width-1) {
+      font-size: $font-size-h1 / 2.5;
+    }
   }
   &__item-text {
     margin-top: 20px;
@@ -153,12 +195,17 @@
   }
   &__item-btn {
     display: block;
+    width: fit-content;
     margin-top: 35px;
     font-size: $font-size-base - .1;
     font-family: $font-family-base;
     line-height: $line-height-base + .6;
     font-weight: 400;
     color: $white;
+    &:hover,
+    &:active {
+      color: transparentize($white, .2);
+    }
   }
 }
 
@@ -166,21 +213,24 @@
   background-color: $white;
   padding-top: 90px;
   padding-bottom: 150px;
+  @media (max-width: $min-width-1) {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
   &__wrap {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 2%;
-    padding-right: 2%;
-    max-width: 1170px;
+    @include wrapper;
   }
   &__title {
     margin-top: 0;
-    margin-bottom: 60px;
+    margin-bottom: 0;
     font-size: $font-size-h1 / 1.7;
     font-family: $font-family-base;
     line-height: $line-height-base;
     font-weight: 300;
     color: $grey-green;
+    @media (max-width: $min-width-1) {
+      font-size: $font-size-h1 / 2;
+    }
   }
   &__list {
     display: grid;
@@ -189,6 +239,15 @@
     list-style: none;
     padding: 0;
     margin-top: 60px;
+    @media (max-width: $min-width-1) {
+      display: block;
+      margin-top: 30px;
+    }
+  }
+  &__item + &__item {
+    @media (max-width: $min-width-1) {
+      margin-top: 30px;
+    }
   }
   &__item-title {
     margin-top: 0;
@@ -220,12 +279,12 @@
   @media (min-resolution: 2dppx) {
     background-image: url('./img/promo__bg@2x.jpg');
   }
+  @media (max-width: $min-width-1) {
+    padding-top: 350px;
+    padding-bottom: 120px;
+  }
   &__wrap {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 2%;
-    padding-right: 2%;
-    max-width: 1170px;
+    @include wrapper;
   }
   &__title {
     margin-top: 0;
@@ -235,6 +294,9 @@
     line-height: $line-height-base;
     font-weight: 300;
     color: $white;
+    @media (max-width: $min-width-1) {
+      font-size: $font-size-h1 * 2 / 3;
+    }
   }
   &__text {
     width: 40%;
@@ -245,6 +307,10 @@
     line-height: $line-height-base + .6;
     font-weight: 400;
     color: $white;
+    @media (max-width: $min-width-1) {
+      width: 100%;
+      margin-top: 35px;
+    }
   }
   &__btn {
     display: block;
@@ -254,6 +320,10 @@
     line-height: $line-height-base + .5;
     font-weight: 700;
     color: $white;
+    &:hover,
+    &:active {
+      color: transparentize($white, .2);
+    }
   }
 }
 
@@ -261,12 +331,12 @@
   background-color: $green;
   padding-top: 120px;
   padding-bottom: 155px;
+  @media (max-width: $min-width-1) {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
   &__wrap {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 2%;
-    padding-right: 2%;
-    max-width: 1170px;
+    @include wrapper;
   }
   &__title {
     margin-top: 0;
@@ -284,6 +354,15 @@
     list-style: none;
     padding: 0;
     margin-top: 60px;
+    @media (max-width: $min-width-1) {
+      display: block;
+      margin-top: 30px;
+    }
+  }
+  &__item + &__item {
+    @media (max-width: $min-width-1) {
+      margin-top: 30px;
+    }
   }
   &__item-title {
     margin-top: 0;
@@ -309,12 +388,12 @@
   background-color: $grey-light;
   padding-top: 100px;
   padding-bottom: 145px;
+  @media (max-width: $min-width-1) {
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
   &__wrap {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 2%;
-    padding-right: 2%;
-    max-width: 1170px;
+    @include wrapper;
   }
   &__title {
     @include visually-hidden;
@@ -324,6 +403,9 @@
     grid-template-columns: 49% 1fr 49%;
     list-style: none;
     padding: 0;
+    @media (max-width: $min-width-1) {
+      display: block;
+    }
   }
   &__item {
     padding-top: 45px;
@@ -340,6 +422,11 @@
     &:hover {
       background-color: $white;
       box-shadow: 0 0 62px rgba(0, 0, 0, 0.05);
+    }
+  }
+  &__item + &__item {
+    @media (max-width: $min-width-1) {
+      margin-top: 30px;
     }
   }
   &__item-flag {
@@ -398,6 +485,9 @@
     color: $white;
     background-color: $green;
     text-transform: uppercase;
+    &:active {
+      color: transparentize($white, .2);
+    }
   }
   &__platforms {
     @include list-to-flex;

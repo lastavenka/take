@@ -13,12 +13,12 @@
   @media (min-resolution: 2dppx) {
     background-image: url('../../modules/header/img/page-header__bg@2x.jpg');
   }
+  @media (max-width: $min-width-1) {
+    padding-top: 35px;
+    padding-bottom: 280px;
+  }
   &__wrap {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 2%;
-    padding-right: 2%;
-    max-width: 1170px;
+    @include wrapper;
   }
   &__logo {
     font-family: Merriweather, Arial, sans-serif;
@@ -40,8 +40,13 @@
     line-height: $line-height-base;
     font-weight: 300;
     color: $white;
+    @media (max-width: $min-width-1) {
+      font-size: $font-size-h1 * 2 / 3;
+      margin-top: 150px;
+    }
   }
   &__text {
+    width: percentage(470/1170);
     margin-top: 0;
     margin-bottom: 0;
     font-size: $font-size-base - .1;
@@ -49,5 +54,8 @@
     line-height: $line-height-base + .6;
     font-weight: 400;
     color: $white;
+    @media (max-width: $min-width-1) {
+      width: 100%;
+    }
   }
 }
