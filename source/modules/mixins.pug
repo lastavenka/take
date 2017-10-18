@@ -4,4 +4,5 @@ mixin link(href, bem, name)
 mixin list(bem, arr)
   ul(class=bem)
     each item in arr
-      li(class=bem + "-item")= item
+      li(class=bem + "-item")
+        a(href="#" class=bem + "-link")= item

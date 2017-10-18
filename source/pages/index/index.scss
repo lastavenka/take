@@ -4,7 +4,6 @@
 @import "../../sass/mixins";
 @import "../../modules/header/page-header";
 @import "../../modules/footer/page-footer";
-
 .about {
   background-color: $white;
   padding-top: 105px;
@@ -19,9 +18,9 @@
   }
   &__img {
     position: absolute;
-    width: 61%;
-    right: -50px;
-    top: -830px;
+    width: 120%;
+    right: 0;
+    bottom: 110%;
   }
   &__cont {
     display: grid;
@@ -30,6 +29,7 @@
   &__inner {
     grid-column: 1 / span 1;
     &--shift {
+      position: relative;
       grid-column: 3 / span 1;
       margin-top: 100px;
     }
@@ -279,21 +279,11 @@
   }
   &__list {
     display: grid;
-    grid-template-columns: 32% 1fr 32% 1fr 32% 1fr;
+    grid-template-columns: repeat(3, 32%);
+    grid-column-gap: (100% - 32%*3) / 2;
     list-style: none;
     padding: 0;
     margin-top: 60px;
-  }
-  &__item {
-    &--webbased {
-      grid-column: 1 / span 1;
-    }
-    &--team {
-      grid-column: 3 / span 1;
-    }
-    &--support {
-      grid-column: 5 / span 1;
-    }
   }
   &__item-title {
     margin-top: 0;
@@ -408,14 +398,34 @@
     color: $white;
     background-color: $green;
     text-transform: uppercase;
-    
   }
   &__platforms {
     @include list-to-flex;
     justify-content: flex-start;
     margin-top: 19px;
   }
-  &__platforms-item + &__platforms-item {
+  &__platforms-item+&__platforms-item {
     margin-left: 16px;
+  }
+  &__platforms-item {
+    font-size: 0;
+    &--apple {
+      width: 20px;
+      height: 23px;
+      background-image: url('./img/plans__platforms--apple.svg');
+      background-size: cover;
+    }
+    &--windows {
+      width: 24px;
+      height: 23px;
+      background-image: url('./img/plans__platforms--win.svg');
+      background-size: cover;
+    }
+    &--android {
+      width: 23px;
+      height: 23px;
+      background-image: url('./img/plans__platforms--android.svg');
+      background-size: cover;
+    }
   }
 }

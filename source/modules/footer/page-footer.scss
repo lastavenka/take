@@ -2,3 +2,108 @@
 @import "../../sass/scaffolding";
 @import "../../sass/type";
 @import "../../sass/mixins";
+
+.page-footer {
+  background-color: $dark-blue;
+  padding-top: 125px;
+  padding-bottom: 150px;
+  &__wrap {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2%;
+    padding-right: 2%;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: percentage(570px / 1170px) 1fr percentage(470px / 1170px);
+    grid-template-rows: 50% 50%;
+  }
+  &__getintouch {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
+  &__form {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    margin-top: 65px;
+  }
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: $font-size-base - .1;
+    font-family: $font-family-base;
+    line-height: $line-height-base + .6;
+    font-weight: 600;
+    color: $grey-light;
+  }
+  &__text {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: $font-size-base - .1;
+    font-family: $font-family-base;
+    line-height: $line-height-base + .6;
+    font-weight: 400;
+    color: $grey-light;
+  }
+  &__submit-wrap {
+    display: flex;
+  }
+  &__label {
+    width: 85%;
+    height: 100%;
+  }
+  &__input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 58px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+    border: none;
+    font-size: $font-size-base - .1;
+    font-family: $font-family-base;
+  }
+  &__submit {
+    display: block;
+    width: 15%;
+    font-size: 0;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    background-color: $green;
+    cursor: pointer;
+    background-image: url('../../modules/footer/img/page-footer__submit.svg');
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &__note {
+    display: block;
+    margin-top: 15px;
+    font-size: $font-size-base - .2;
+    font-family: $font-family-base;
+    line-height: $line-height-base + .3;
+    font-weight: 400;
+    color: $dust-blue;
+  }
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+  &__list-item {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: $font-size-base - .1;
+    font-family: $font-family-base;
+    line-height: $line-height-base + .6;
+    font-weight: 400;
+    color: $grey-light;
+  }
+}
