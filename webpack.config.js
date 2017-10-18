@@ -8,7 +8,7 @@ const css = require('./webpack/css');
 const extractCSS = require('./webpack/css.extract');
 const uglifyJS = require('./webpack/js.uglify');
 const hintJS = require('./webpack/js.hint');
-const imgMin = require('./webpack/img.min');
+const images = require('./webpack/images');
 const styleLint = require('./webpack/stylelint');
  
 const PATHS = {
@@ -30,7 +30,7 @@ const common = merge([
     ]
   },
   pug(),
-  imgMin()
+  images()
 ]);
 
 module.exports = function(env) {

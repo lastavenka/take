@@ -5,8 +5,7 @@ module.exports = function () {
         new styleLintPlugin({
           syntax: 'scss',
           configFile: '.stylelintrc',
-          context: 'source',
-          
+          context: 'source', 
       })
     ]
   };
