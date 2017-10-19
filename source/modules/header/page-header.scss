@@ -26,11 +26,11 @@
     font-weight: 400;
     color: $white;
     text-transform: lowercase;
-    vertical-align: top;
     line-height: 42px;
   }
   &__logo-img {
     margin-right: 8px;
+    vertical-align: middle;
   }
   &__title {
     margin-top: 350px;
