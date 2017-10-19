@@ -1,12 +1,15 @@
 doctype html
 html(lang="en")
-	head
-		meta(charset="utf-8")
-		meta(name="viewport" content="width=device-width,initial-scale=1")
-
-		title
-			block title
-	body
-		include ../modules/header/page-header
-		block content
-		include ../modules/footer/page-footer
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    meta(property="og:title" content="Take")    
+    meta(property="og:type" content="website")
+    meta(property="og:image" content="http://example.com/")
+    title
+      block title
+  body
+    include ../modules/header/page-header
+    main(role="main")
+      block content
+    include ../modules/footer/page-footer

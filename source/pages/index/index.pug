@@ -20,7 +20,7 @@ block content
           p.about__text Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
 
   section.features
-    h2.features__title Features
+    h2(class="features__title", aria-hidden="true") Features
     - var featureslist = [{name: "quality",title: "Design quality", text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut adipisicing.", btn: "Find out more"},{name: "built", title: "Built to last", text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.", btn: "Find out more"},                                                                                      {name: "clients", title: "Our clients", text: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", btn: "Get insights"},                              {name: "howto", title: "How to shoo great", text: "Velit euismod in pellentesque massa placerat duis ultricies lacus sed. Tortor posuere ac ut consequat semper. Et ultrices neque ornare aenean euismod elementum nisi quis eleifend.", btn: "Find out more"},                                                 {name: "signup", title: "Sign up & see why", text: "Bibendum neque egestas congue quisque egestas diam in. Nec feugiat nisl pretium fusce. Lacinia quis vel eros donec ac odio tempor orci.", btn: "Get Started Now"}, {name: "pictures", title: "Perfect pictures", text: "Vel orci porta non pulvinar neque. Lacinia at quis risus sed vulputate odio. Etiam non quam lacus suspendisse faucibus interdum posuere lorem. Feugiat in ante metus dictum at tempor commodo ullamcorper.", btn: "Find out more"},                               {name: "new", title: "Start something new", text: "Est ultricies integer quis auctor elit sed vulputate mi. Mi eget mauris pharetra et ultrices. Id donec ultrices tincidunt arcu non sodales neque. ", btn: "Get Started Now"}];
     
     mixin feature-item(feature)
@@ -70,7 +70,7 @@ block content
 
   section.plans
     .plans__wrap
-      h2.plans__title Plans
+      h2(class="plans__title", aria-hidden="true") Plans
       - var plansList = [{name: "solo", title: "Go it solo", descr: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco", flag: "legacy", price: "$9", platforms: ["Apple", "Windows"]},     {name: "team", title: "Team plan", descr: "Dui faucibus in ornare quam viverra orci sagittis. Viverra maecenas accumsan lacus vel facilisis volutpat. Ac turpis egestas integer eget aliquet nibh praesent tristique. Neque volutpat ac tincidunt vitae semper quis lectus nulla. Tortor at risus viverra adipiscing at in tellus.", flag: "popular", price: "$18", platforms: ["Apple", "Windows", "Android"]}]
       
       mixin plan-item(plan)
