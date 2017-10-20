@@ -5,8 +5,13 @@ module.exports = function () {
         {
           test: /\.(jpe?g|png|gif|svg)$/i,
           use: [
-              'img-loader',
-              'file-loader?limit=10000&name=./img/[hash].[ext]'
+            'file-loader?limit=10000&name=./img/[hash].[ext]',
+            {
+              loader: 'image-webpack-loader',
+              options: {
+                bypassOnDebug: true,
+              },
+            },
           ]
         }
       ]
