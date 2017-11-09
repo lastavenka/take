@@ -1,9 +1,9 @@
-<h1>Front-end web development of landing page</h1>
+<p>Front-end development of  landing page</p>
+<a href="https://lastavenka.github.io/take/build/index.html" target="_blank">Final result</a>
 
+<h4>TECHNOLOGIES AND TOOLS</h4>
 <ul>
   <li>Webpack</li>
   <li>Pug</li>
   <li>Grids layout</li>
 </ul>
-
-<p>Please see the result <a href="https://lastavenka.github.io/take/build/index.html" target="_blank">here</a>.</p>
