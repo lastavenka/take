@@ -5,3 +5,4 @@ Thumbs.db
 *.map
 .sass-cache
 .csscomb.json
+package-lock.json
